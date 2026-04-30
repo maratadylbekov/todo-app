@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задачи</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Задачи</h1>
+        <p></p>
+      </header>
+      <main>
+        <div class="filters-container" id="filters-container">
+          <div>
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="done">Выполненные</button>
+            <button class="filter-btn" data-filter="undone">Активные</button>
+          </div>
+          <div>
+            <button class="sort" id="by-date">По дате</button>
+            <button class="sort" id="by-priority">По приоритету</button>
+          </div>
+        </div>
+        <div class="tasks-container">
+          <div class="task-input">
+            <input
+              class="task-text"
+              id="task-text"
+              type="text"
+              placeholder="Введите задачу"
+            />
+            <input class="task-date" id="task-date" type="date" />
+            <button class="add-task" id="add-task">Добавить</button>
+          </div>
+          <ul class="tasks-list hidden" id="tasks-list"></ul>
+          <p class="empty-state hidden" id="empty-state"></p>
+        </div>
+      </main>
+      <footer>
+        <p>
+          Все: <span class="counter-all"></span> | Выполненные:
+          <span class="counter-completed"></span> | Активные:
+          <span class="counter-active"></span>
+        </p>
+        <button class="clear-done" id="clear-done">Удалить выполненные</button>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
